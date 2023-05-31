@@ -21,5 +21,4 @@ public interface DepotMapper extends BaseMapper<Depot> {
      * @return
      */
     List<Depot> getAllLikeNameOrLikeRemake(String name, String remark);
-
 }
