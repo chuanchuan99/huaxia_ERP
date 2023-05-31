@@ -10,6 +10,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class SupplierVendorAndUser {
     /**
+     * id
+     */
+    private String id;
+    /**
      * 名称
      */
     private String Supplier;
