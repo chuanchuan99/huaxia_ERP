@@ -1,7 +1,13 @@
 package cn.huaxiaerp.huaxia_erp.datasource.vo;
 
-import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SupplierVendorAndUser {
     /**
      * 名称
