@@ -21,4 +21,5 @@ public interface DepotService extends IService<Depot> {
      * @return
      */
     List<Depot> getAllLikeNameOrLikeRemake(String name, String remark);
+
 }
