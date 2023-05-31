@@ -6,10 +6,8 @@ import cn.huaxiaerp.huaxia_erp.datasource.po.Supplier;
 import cn.huaxiaerp.huaxia_erp.service.SupplierService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,8 +20,6 @@ import java.util.List;
  */
 @Service
 public class SupplierServiceImpl extends ServiceImpl<SupplierMapper, Supplier> implements SupplierService {
-    @Resource
-    private SupplierMapper supplierMapper;
 
     /**
      * 查询所有会员
@@ -35,11 +31,6 @@ public class SupplierServiceImpl extends ServiceImpl<SupplierMapper, Supplier> i
         query.eq("type","会员");
         List<Supplier> suppliers = baseMapper.selectList(query);
         return suppliers;
-    }
-
-    @Override
-    public List<Supplier> getSupplierLikeSupplierOrTelephoneOrPhoneNumber(String type,String supplier, String telephone, String phoneNum) {
-        return supplierMapper.getSupplierLikeSupplierOrTelephoneOrPhoneNumber(type,supplier,telephone,phoneNum);
     }
 
 }

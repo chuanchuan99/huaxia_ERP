@@ -21,15 +21,4 @@ public interface SupplierService extends IService<Supplier> {
      * @return
      */
     public List<Supplier> findBySelectRetail();
-
-    /**
-     * 动态sql获取供应商/客户信息
-     * @param supplier 供应商名称
-     * @param telephone 供应商手机
-     * @param phoneNum 供应商电话
-     * @param type 供应商/客户
-     * @return
-     */
-    public List<Supplier> getSupplierLikeSupplierOrTelephoneOrPhoneNumber(String type,String supplier ,String telephone,String phoneNum );
-
 }
