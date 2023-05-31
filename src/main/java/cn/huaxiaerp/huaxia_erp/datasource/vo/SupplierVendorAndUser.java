@@ -12,7 +12,7 @@ public class SupplierVendorAndUser {
     /**
      * id
      */
-    private String id;
+    private String Id;
     /**
      * 名称
      */
