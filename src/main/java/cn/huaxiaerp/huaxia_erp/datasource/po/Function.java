@@ -6,14 +6,18 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 功能模块表
-* @TableName jsh_function
+* @TableName jsh_function* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Function implements Serializable {
 
     /**
@@ -103,187 +107,5 @@ public class Function implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 编号
-    */
-    private void setNumber(String number){
-    this.number = number;
-    }
-
-    /**
-    * 名称
-    */
-    private void setName(String name){
-    this.name = name;
-    }
-
-    /**
-    * 上级编号
-    */
-    private void setParentNumber(String parentNumber){
-    this.parentNumber = parentNumber;
-    }
-
-    /**
-    * 链接
-    */
-    private void setUrl(String url){
-    this.url = url;
-    }
-
-    /**
-    * 组件
-    */
-    private void setComponent(String component){
-    this.component = component;
-    }
-
-    /**
-    * 收缩
-    */
-    private void setState(Boolean state){
-    this.state = state;
-    }
-
-    /**
-    * 排序
-    */
-    private void setSort(String sort){
-    this.sort = sort;
-    }
-
-    /**
-    * 启用
-    */
-    private void setEnabled(Boolean enabled){
-    this.enabled = enabled;
-    }
-
-    /**
-    * 类型
-    */
-    private void setType(String type){
-    this.type = type;
-    }
-
-    /**
-    * 功能按钮
-    */
-    private void setPushBtn(String pushBtn){
-    this.pushBtn = pushBtn;
-    }
-
-    /**
-    * 图标
-    */
-    private void setIcon(String icon){
-    this.icon = icon;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 编号
-    */
-    private String getNumber(){
-    return this.number;
-    }
-
-    /**
-    * 名称
-    */
-    private String getName(){
-    return this.name;
-    }
-
-    /**
-    * 上级编号
-    */
-    private String getParentNumber(){
-    return this.parentNumber;
-    }
-
-    /**
-    * 链接
-    */
-    private String getUrl(){
-    return this.url;
-    }
-
-    /**
-    * 组件
-    */
-    private String getComponent(){
-    return this.component;
-    }
-
-    /**
-    * 收缩
-    */
-    private Boolean getState(){
-    return this.state;
-    }
-
-    /**
-    * 排序
-    */
-    private String getSort(){
-    return this.sort;
-    }
-
-    /**
-    * 启用
-    */
-    private Boolean getEnabled(){
-    return this.enabled;
-    }
-
-    /**
-    * 类型
-    */
-    private String getType(){
-    return this.type;
-    }
-
-    /**
-    * 功能按钮
-    */
-    private String getPushBtn(){
-    return this.pushBtn;
-    }
-
-    /**
-    * 图标
-    */
-    private String getIcon(){
-    return this.icon;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

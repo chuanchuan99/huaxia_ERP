@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 产品当前库存 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface MaterialCurrentStockService extends IService<MaterialCurrentStock> {

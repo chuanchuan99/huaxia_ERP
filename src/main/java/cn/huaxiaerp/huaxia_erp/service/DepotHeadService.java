@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 单据主表 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface DepotHeadService extends IService<DepotHead> {

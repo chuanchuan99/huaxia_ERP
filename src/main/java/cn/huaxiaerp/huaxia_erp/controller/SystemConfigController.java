@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 系统参数 前端控制器
  * </p>
  *
- * @author Tv
+ * @authorkjc
  * @since 2023-05-31
  */
 @RestController

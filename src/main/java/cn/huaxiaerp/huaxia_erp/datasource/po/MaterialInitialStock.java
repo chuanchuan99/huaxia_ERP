@@ -7,14 +7,18 @@ import java.io.Serializable;
 
 import java.math.BigDecimal;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 产品初始库存
-* @TableName jsh_material_initial_stock
+* @TableName jsh_material_initial_stock* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MaterialInitialStock implements Serializable {
 
     /**
@@ -60,118 +64,5 @@ public class MaterialInitialStock implements Serializable {
     @ApiModelProperty("删除标记，0未删除，1删除")
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
-
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 产品id
-    */
-    private void setMaterialId(Long materialId){
-    this.materialId = materialId;
-    }
-
-    /**
-    * 仓库id
-    */
-    private void setDepotId(Long depotId){
-    this.depotId = depotId;
-    }
-
-    /**
-    * 初始库存数量
-    */
-    private void setNumber(BigDecimal number){
-    this.number = number;
-    }
-
-    /**
-    * 最低库存数量
-    */
-    private void setLowSafeStock(BigDecimal lowSafeStock){
-    this.lowSafeStock = lowSafeStock;
-    }
-
-    /**
-    * 最高库存数量
-    */
-    private void setHighSafeStock(BigDecimal highSafeStock){
-    this.highSafeStock = highSafeStock;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 产品id
-    */
-    private Long getMaterialId(){
-    return this.materialId;
-    }
-
-    /**
-    * 仓库id
-    */
-    private Long getDepotId(){
-    return this.depotId;
-    }
-
-    /**
-    * 初始库存数量
-    */
-    private BigDecimal getNumber(){
-    return this.number;
-    }
-
-    /**
-    * 最低库存数量
-    */
-    private BigDecimal getLowSafeStock(){
-    return this.lowSafeStock;
-    }
-
-    /**
-    * 最高库存数量
-    */
-    private BigDecimal getHighSafeStock(){
-    return this.highSafeStock;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

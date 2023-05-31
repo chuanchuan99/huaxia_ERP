@@ -7,14 +7,18 @@ import java.io.Serializable;
 
 import java.util.Date;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 产品类型表
-* @TableName jsh_material_category
+* @TableName jsh_material_category* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MaterialCategory implements Serializable {
 
     /**
@@ -83,160 +87,5 @@ public class MaterialCategory implements Serializable {
     @ApiModelProperty("删除标记，0未删除，1删除")
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
-
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 名称
-    */
-    private void setName(String name){
-    this.name = name;
-    }
-
-    /**
-    * 等级
-    */
-    private void setCategoryLevel(Integer categoryLevel){
-    this.categoryLevel = categoryLevel;
-    }
-
-    /**
-    * 上级id
-    */
-    private void setParentId(Long parentId){
-    this.parentId = parentId;
-    }
-
-    /**
-    * 显示顺序
-    */
-    private void setSort(String sort){
-    this.sort = sort;
-    }
-
-    /**
-    * 编号
-    */
-    private void setSerialNo(String serialNo){
-    this.serialNo = serialNo;
-    }
-
-    /**
-    * 备注
-    */
-    private void setRemark(String remark){
-    this.remark = remark;
-    }
-
-    /**
-    * 创建时间
-    */
-    private void setCreateTime(Date createTime){
-    this.createTime = createTime;
-    }
-
-    /**
-    * 更新时间
-    */
-    private void setUpdateTime(Date updateTime){
-    this.updateTime = updateTime;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 名称
-    */
-    private String getName(){
-    return this.name;
-    }
-
-    /**
-    * 等级
-    */
-    private Integer getCategoryLevel(){
-    return this.categoryLevel;
-    }
-
-    /**
-    * 上级id
-    */
-    private Long getParentId(){
-    return this.parentId;
-    }
-
-    /**
-    * 显示顺序
-    */
-    private String getSort(){
-    return this.sort;
-    }
-
-    /**
-    * 编号
-    */
-    private String getSerialNo(){
-    return this.serialNo;
-    }
-
-    /**
-    * 备注
-    */
-    private String getRemark(){
-    return this.remark;
-    }
-
-    /**
-    * 创建时间
-    */
-    private Date getCreateTime(){
-    return this.createTime;
-    }
-
-    /**
-    * 更新时间
-    */
-    private Date getUpdateTime(){
-    return this.updateTime;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

@@ -7,6 +7,9 @@ import org.springframework.http.MediaType;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * kjc
+ */
 public class ResponseUtil {
 
     public static void out(HttpServletResponse response, Result r) {

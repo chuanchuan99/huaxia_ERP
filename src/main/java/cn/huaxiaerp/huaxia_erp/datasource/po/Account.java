@@ -7,14 +7,19 @@ import java.io.Serializable;
 
 import java.math.BigDecimal;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 账户信息
 * @TableName jsh_account
+* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Account implements Serializable {
 
     /**
@@ -84,159 +89,5 @@ public class Account implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 名称
-    */
-    private void setName(String name){
-    this.name = name;
-    }
-
-    /**
-    * 编号
-    */
-    private void setSerialNo(String serialNo){
-    this.serialNo = serialNo;
-    }
-
-    /**
-    * 期初金额
-    */
-    private void setInitialAmount(BigDecimal initialAmount){
-    this.initialAmount = initialAmount;
-    }
-
-    /**
-    * 当前余额
-    */
-    private void setCurrentAmount(BigDecimal currentAmount){
-    this.currentAmount = currentAmount;
-    }
-
-    /**
-    * 备注
-    */
-    private void setRemark(String remark){
-    this.remark = remark;
-    }
-
-    /**
-    * 启用
-    */
-    private void setEnabled(Boolean enabled){
-    this.enabled = enabled;
-    }
-
-    /**
-    * 排序
-    */
-    private void setSort(String sort){
-    this.sort = sort;
-    }
-
-    /**
-    * 是否默认
-    */
-    private void setIsDefault(Boolean isDefault){
-    this.isDefault = isDefault;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 名称
-    */
-    private String getName(){
-    return this.name;
-    }
-
-    /**
-    * 编号
-    */
-    private String getSerialNo(){
-    return this.serialNo;
-    }
-
-    /**
-    * 期初金额
-    */
-    private BigDecimal getInitialAmount(){
-    return this.initialAmount;
-    }
-
-    /**
-    * 当前余额
-    */
-    private BigDecimal getCurrentAmount(){
-    return this.currentAmount;
-    }
-
-    /**
-    * 备注
-    */
-    private String getRemark(){
-    return this.remark;
-    }
-
-    /**
-    * 启用
-    */
-    private Boolean getEnabled(){
-    return this.enabled;
-    }
-
-    /**
-    * 排序
-    */
-    private String getSort(){
-    return this.sort;
-    }
-
-    /**
-    * 是否默认
-    */
-    private Boolean getIsDefault(){
-    return this.isDefault;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

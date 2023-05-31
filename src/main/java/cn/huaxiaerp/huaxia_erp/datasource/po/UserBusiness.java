@@ -6,14 +6,18 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 用户/角色/模块关系表
-* @TableName jsh_user_business
+* @TableName jsh_user_business* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserBusiness implements Serializable {
 
     /**
@@ -63,103 +67,5 @@ public class UserBusiness implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 类别
-    */
-    private void setType(String type){
-    this.type = type;
-    }
-
-    /**
-    * 主id
-    */
-    private void setKeyId(String keyId){
-    this.keyId = keyId;
-    }
-
-    /**
-    * 值
-    */
-    private void setValue(String value){
-    this.value = value;
-    }
-
-    /**
-    * 按钮权限
-    */
-    private void setBtnStr(String btnStr){
-    this.btnStr = btnStr;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 类别
-    */
-    private String getType(){
-    return this.type;
-    }
-
-    /**
-    * 主id
-    */
-    private String getKeyId(){
-    return this.keyId;
-    }
-
-    /**
-    * 值
-    */
-    private String getValue(){
-    return this.value;
-    }
-
-    /**
-    * 按钮权限
-    */
-    private String getBtnStr(){
-    return this.btnStr;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

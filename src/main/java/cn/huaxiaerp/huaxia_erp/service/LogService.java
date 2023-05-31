@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 操作日志 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface LogService extends IService<Log> {

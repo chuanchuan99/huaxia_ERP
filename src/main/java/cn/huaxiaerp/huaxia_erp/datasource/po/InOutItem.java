@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.Length;
 
 /**
 * 收支项目
-* @TableName jsh_in_out_item
+* @TableName jsh_in_out_item* kjc
 */
 @Data
 public class InOutItem implements Serializable {
@@ -68,117 +68,5 @@ public class InOutItem implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 名称
-    */
-    private void setName(String name){
-    this.name = name;
-    }
-
-    /**
-    * 类型
-    */
-    private void setType(String type){
-    this.type = type;
-    }
-
-    /**
-    * 备注
-    */
-    private void setRemark(String remark){
-    this.remark = remark;
-    }
-
-    /**
-    * 启用
-    */
-    private void setEnabled(Boolean enabled){
-    this.enabled = enabled;
-    }
-
-    /**
-    * 排序
-    */
-    private void setSort(String sort){
-    this.sort = sort;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 名称
-    */
-    private String getName(){
-    return this.name;
-    }
-
-    /**
-    * 类型
-    */
-    private String getType(){
-    return this.type;
-    }
-
-    /**
-    * 备注
-    */
-    private String getRemark(){
-    return this.remark;
-    }
-
-    /**
-    * 启用
-    */
-    private Boolean getEnabled(){
-    return this.enabled;
-    }
-
-    /**
-    * 排序
-    */
-    private String getSort(){
-    return this.sort;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

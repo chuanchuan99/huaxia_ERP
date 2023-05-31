@@ -1,7 +1,9 @@
 package cn.huaxiaerp.huaxia_erp.common.response;
 
 import lombok.Getter;
-
+/**
+ * kjc
+ */
 @Getter
 public enum ResultCodeEnum {
 

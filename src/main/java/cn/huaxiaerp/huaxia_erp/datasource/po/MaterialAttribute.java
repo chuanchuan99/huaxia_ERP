@@ -6,14 +6,18 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 产品属性表
-* @TableName jsh_material_attribute
+* @TableName jsh_material_attribute* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MaterialAttribute implements Serializable {
 
     /**
@@ -48,76 +52,5 @@ public class MaterialAttribute implements Serializable {
     @ApiModelProperty("删除标记，0未删除，1删除")
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
-
-    /**
-    *
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 属性名
-    */
-    private void setAttributeName(String attributeName){
-    this.attributeName = attributeName;
-    }
-
-    /**
-    * 属性值
-    */
-    private void setAttributeValue(String attributeValue){
-    this.attributeValue = attributeValue;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    *
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 属性名
-    */
-    private String getAttributeName(){
-    return this.attributeName;
-    }
-
-    /**
-    * 属性值
-    */
-    private String getAttributeValue(){
-    return this.attributeValue;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

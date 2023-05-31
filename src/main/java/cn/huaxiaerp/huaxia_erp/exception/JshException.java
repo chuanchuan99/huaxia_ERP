@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 
 /**
  * 封装日志打印，收集日志
- * author: ji shenghua, qq 752718 920
+ * author: ji shenghua, qq 752718 920* kjc
  */
 public class JshException {
 

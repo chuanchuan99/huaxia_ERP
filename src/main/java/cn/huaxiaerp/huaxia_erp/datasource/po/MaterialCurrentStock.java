@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.Length;
 
 /**
 * 产品当前库存
-* @TableName jsh_material_current_stock
+* @TableName jsh_material_current_stock* kjc
 */
 @Data
 public class MaterialCurrentStock implements Serializable {
@@ -56,84 +56,6 @@ public class MaterialCurrentStock implements Serializable {
     */
     private void setId(Long id){
     this.id = id;
-    }
-
-    /**
-    * 产品id
-    */
-    private void setMaterialId(Long materialId){
-    this.materialId = materialId;
-    }
-
-    /**
-    * 仓库id
-    */
-    private void setDepotId(Long depotId){
-    this.depotId = depotId;
-    }
-
-    /**
-    * 当前库存数量
-    */
-    private void setCurrentNumber(BigDecimal currentNumber){
-    this.currentNumber = currentNumber;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 产品id
-    */
-    private Long getMaterialId(){
-    return this.materialId;
-    }
-
-    /**
-    * 仓库id
-    */
-    private Long getDepotId(){
-    return this.depotId;
-    }
-
-    /**
-    * 当前库存数量
-    */
-    private BigDecimal getCurrentNumber(){
-    return this.currentNumber;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
     }
 
 }

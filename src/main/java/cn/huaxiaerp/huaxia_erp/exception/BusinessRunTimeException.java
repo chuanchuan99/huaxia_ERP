@@ -6,6 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * * kjc
+ */
 @Slf4j
 @Getter
 public class BusinessRunTimeException extends RuntimeException {

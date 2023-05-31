@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 功能模块表 Mapper 接口
  * </p>
  *
- * @author Tv
+ * @author kjc
  * @since 2023-05-31
  */
 public interface FunctionMapper extends BaseMapper<Function> {

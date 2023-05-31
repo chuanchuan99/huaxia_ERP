@@ -8,14 +8,18 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 产品价格扩展
-* @TableName jsh_material_extend
+* @TableName jsh_material_extend* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MaterialExtend implements Serializable {
 
     /**
@@ -114,229 +118,5 @@ public class MaterialExtend implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 商品id
-    */
-    private void setMaterialId(Long materialId){
-    this.materialId = materialId;
-    }
-
-    /**
-    * 商品条码
-    */
-    private void setBarCode(String barCode){
-    this.barCode = barCode;
-    }
-
-    /**
-    * 商品单位
-    */
-    private void setCommodityUnit(String commodityUnit){
-    this.commodityUnit = commodityUnit;
-    }
-
-    /**
-    * 多属性
-    */
-    private void setSku(String sku){
-    this.sku = sku;
-    }
-
-    /**
-    * 采购价格
-    */
-    private void setPurchaseDecimal(BigDecimal purchaseDecimal){
-    this.purchaseDecimal = purchaseDecimal;
-    }
-
-    /**
-    * 零售价格
-    */
-    private void setCommodityDecimal(BigDecimal commodityDecimal){
-    this.commodityDecimal = commodityDecimal;
-    }
-
-    /**
-    * 销售价格
-    */
-    private void setWholesaleDecimal(BigDecimal wholesaleDecimal){
-    this.wholesaleDecimal = wholesaleDecimal;
-    }
-
-    /**
-    * 最低售价
-    */
-    private void setLowDecimal(BigDecimal lowDecimal){
-    this.lowDecimal = lowDecimal;
-    }
-
-    /**
-    * 是否为默认单位，1是，0否
-    */
-    private void setDefaultFlag(String defaultFlag){
-    this.defaultFlag = defaultFlag;
-    }
-
-    /**
-    * 创建日期
-    */
-    private void setCreateTime(Date createTime){
-    this.createTime = createTime;
-    }
-
-    /**
-    * 创建人编码
-    */
-    private void setCreateSerial(String createSerial){
-    this.createSerial = createSerial;
-    }
-
-    /**
-    * 更新人编码
-    */
-    private void setUpdateSerial(String updateSerial){
-    this.updateSerial = updateSerial;
-    }
-
-    /**
-    * 更新时间戳
-    */
-    private void setUpdateTime(Long updateTime){
-    this.updateTime = updateTime;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 商品id
-    */
-    private Long getMaterialId(){
-    return this.materialId;
-    }
-
-    /**
-    * 商品条码
-    */
-    private String getBarCode(){
-    return this.barCode;
-    }
-
-    /**
-    * 商品单位
-    */
-    private String getCommodityUnit(){
-    return this.commodityUnit;
-    }
-
-    /**
-    * 多属性
-    */
-    private String getSku(){
-    return this.sku;
-    }
-
-    /**
-    * 采购价格
-    */
-    private BigDecimal getPurchaseDecimal(){
-    return this.purchaseDecimal;
-    }
-
-    /**
-    * 零售价格
-    */
-    private BigDecimal getCommodityDecimal(){
-    return this.commodityDecimal;
-    }
-
-    /**
-    * 销售价格
-    */
-    private BigDecimal getWholesaleDecimal(){
-    return this.wholesaleDecimal;
-    }
-
-    /**
-    * 最低售价
-    */
-    private BigDecimal getLowDecimal(){
-    return this.lowDecimal;
-    }
-
-    /**
-    * 是否为默认单位，1是，0否
-    */
-    private String getDefaultFlag(){
-    return this.defaultFlag;
-    }
-
-    /**
-    * 创建日期
-    */
-    private Date getCreateTime(){
-    return this.createTime;
-    }
-
-    /**
-    * 创建人编码
-    */
-    private String getCreateSerial(){
-    return this.createSerial;
-    }
-
-    /**
-    * 更新人编码
-    */
-    private String getUpdateSerial(){
-    return this.updateSerial;
-    }
-
-    /**
-    * 更新时间戳
-    */
-    private Long getUpdateTime(){
-    return this.updateTime;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

@@ -3,6 +3,9 @@ package cn.huaxiaerp.huaxia_erp.datasource.po;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * * kjc
+ */
 public class RoleExample {
     protected String orderByClause;
 

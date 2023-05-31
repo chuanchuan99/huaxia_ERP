@@ -7,14 +7,19 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 单据编号表
 * @TableName jsh_sequence
+ * * kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Sequence implements Serializable {
 
     /**
@@ -57,89 +62,6 @@ public class Sequence implements Serializable {
     @Length(max= 500,message="编码长度不能超过500")
     private String remark;
 
-    /**
-    * 序列名称
-    */
-    private void setSeqName(String seqName){
-    this.seqName = seqName;
-    }
 
-    /**
-    * 最小值
-    */
-    private void setMinValue(Long minValue){
-    this.minValue = minValue;
-    }
-
-    /**
-    * 最大值
-    */
-    private void setMaxValue(Long maxValue){
-    this.maxValue = maxValue;
-    }
-
-    /**
-    * 当前值
-    */
-    private void setCurrentVal(Long currentVal){
-    this.currentVal = currentVal;
-    }
-
-    /**
-    * 增长步数
-    */
-    private void setIncrementVal(Integer incrementVal){
-    this.incrementVal = incrementVal;
-    }
-
-    /**
-    * 备注
-    */
-    private void setRemark(String remark){
-    this.remark = remark;
-    }
-
-
-    /**
-    * 序列名称
-    */
-    private String getSeqName(){
-    return this.seqName;
-    }
-
-    /**
-    * 最小值
-    */
-    private Long getMinValue(){
-    return this.minValue;
-    }
-
-    /**
-    * 最大值
-    */
-    private Long getMaxValue(){
-    return this.maxValue;
-    }
-
-    /**
-    * 当前值
-    */
-    private Long getCurrentVal(){
-    return this.currentVal;
-    }
-
-    /**
-    * 增长步数
-    */
-    private Integer getIncrementVal(){
-    return this.incrementVal;
-    }
-
-    /**
-    * 备注
-    */
-    private String getRemark(){
-    return this.remark;
-    }
 
 }

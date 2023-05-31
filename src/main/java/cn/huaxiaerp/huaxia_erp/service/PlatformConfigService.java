@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 平台参数 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface PlatformConfigService extends IService<PlatformConfig> {

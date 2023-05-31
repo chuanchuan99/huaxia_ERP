@@ -7,14 +7,18 @@ import java.io.Serializable;
 
 import java.util.Date;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 机构表
-* @TableName jsh_organization
+* @TableName jsh_organization* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Organization implements Serializable {
 
     /**
@@ -79,145 +83,6 @@ public class Organization implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
 
-    /**
-    * 机构编号
-    */
-    private void setOrgNo(String orgNo){
-    this.orgNo = orgNo;
-    }
-
-    /**
-    * 机构简称
-    */
-    private void setOrgAbr(String orgAbr){
-    this.orgAbr = orgAbr;
-    }
-
-    /**
-    * 父机构id
-    */
-    private void setParentId(Long parentId){
-    this.parentId = parentId;
-    }
-
-    /**
-    * 机构显示顺序
-    */
-    private void setSort(String sort){
-    this.sort = sort;
-    }
-
-    /**
-    * 备注
-    */
-    private void setRemark(String remark){
-    this.remark = remark;
-    }
-
-    /**
-    * 创建时间
-    */
-    private void setCreateTime(Date createTime){
-    this.createTime = createTime;
-    }
-
-    /**
-    * 更新时间
-    */
-    private void setUpdateTime(Date updateTime){
-    this.updateTime = updateTime;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 机构编号
-    */
-    private String getOrgNo(){
-    return this.orgNo;
-    }
-
-    /**
-    * 机构简称
-    */
-    private String getOrgAbr(){
-    return this.orgAbr;
-    }
-
-    /**
-    * 父机构id
-    */
-    private Long getParentId(){
-    return this.parentId;
-    }
-
-    /**
-    * 机构显示顺序
-    */
-    private String getSort(){
-    return this.sort;
-    }
-
-    /**
-    * 备注
-    */
-    private String getRemark(){
-    return this.remark;
-    }
-
-    /**
-    * 创建时间
-    */
-    private Date getCreateTime(){
-    return this.createTime;
-    }
-
-    /**
-    * 更新时间
-    */
-    private Date getUpdateTime(){
-    return this.updateTime;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

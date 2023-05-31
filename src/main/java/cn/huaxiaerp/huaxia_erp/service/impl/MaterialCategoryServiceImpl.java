@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * 产品类型表 服务实现类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 @Service

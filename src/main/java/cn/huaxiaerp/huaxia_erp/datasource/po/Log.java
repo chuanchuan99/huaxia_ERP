@@ -7,14 +7,18 @@ import java.io.Serializable;
 
 import java.util.Date;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 操作日志
-* @TableName jsh_log
+* @TableName jsh_log* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Log implements Serializable {
 
     /**
@@ -65,117 +69,5 @@ public class Log implements Serializable {
     @ApiModelProperty("租户id")
     private Long tenantId;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 用户id
-    */
-    private void setUserId(Long userId){
-    this.userId = userId;
-    }
-
-    /**
-    * 操作模块名称
-    */
-    private void setOperation(String operation){
-    this.operation = operation;
-    }
-
-    /**
-    * 客户端IP
-    */
-    private void setClientIp(String clientIp){
-    this.clientIp = clientIp;
-    }
-
-    /**
-    * 创建时间
-    */
-    private void setCreateTime(Date createTime){
-    this.createTime = createTime;
-    }
-
-    /**
-    * 操作状态 0==成功，1==失败
-    */
-    private void setStatus(Integer status){
-    this.status = status;
-    }
-
-    /**
-    * 详情
-    */
-    private void setContent(String content){
-    this.content = content;
-    }
-
-    /**
-    * 租户id
-    */
-    private void setTenantId(Long tenantId){
-    this.tenantId = tenantId;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 用户id
-    */
-    private Long getUserId(){
-    return this.userId;
-    }
-
-    /**
-    * 操作模块名称
-    */
-    private String getOperation(){
-    return this.operation;
-    }
-
-    /**
-    * 客户端IP
-    */
-    private String getClientIp(){
-    return this.clientIp;
-    }
-
-    /**
-    * 创建时间
-    */
-    private Date getCreateTime(){
-    return this.createTime;
-    }
-
-    /**
-    * 操作状态 0==成功，1==失败
-    */
-    private Integer getStatus(){
-    return this.status;
-    }
-
-    /**
-    * 详情
-    */
-    private String getContent(){
-    return this.content;
-    }
-
-    /**
-    * 租户id
-    */
-    private Long getTenantId(){
-    return this.tenantId;
-    }
 
 }

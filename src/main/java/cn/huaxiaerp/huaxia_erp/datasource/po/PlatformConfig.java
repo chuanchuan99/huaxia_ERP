@@ -6,14 +6,18 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 平台参数
-* @TableName jsh_platform_config
+* @TableName jsh_platform_config* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class PlatformConfig implements Serializable {
 
     /**
@@ -44,61 +48,5 @@ public class PlatformConfig implements Serializable {
     @Length(max= 200,message="编码长度不能超过200")
     private String platformValue;
 
-    /**
-    *
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 关键词
-    */
-    private void setPlatformKey(String platformKey){
-    this.platformKey = platformKey;
-    }
-
-    /**
-    * 关键词名称
-    */
-    private void setPlatformKeyInfo(String platformKeyInfo){
-    this.platformKeyInfo = platformKeyInfo;
-    }
-
-    /**
-    * 值
-    */
-    private void setPlatformValue(String platformValue){
-    this.platformValue = platformValue;
-    }
-
-
-    /**
-    *
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 关键词
-    */
-    private String getPlatformKey(){
-    return this.platformKey;
-    }
-
-    /**
-    * 关键词名称
-    */
-    private String getPlatformKeyInfo(){
-    return this.platformKeyInfo;
-    }
-
-    /**
-    * 值
-    */
-    private String getPlatformValue(){
-    return this.platformValue;
-    }
 
 }

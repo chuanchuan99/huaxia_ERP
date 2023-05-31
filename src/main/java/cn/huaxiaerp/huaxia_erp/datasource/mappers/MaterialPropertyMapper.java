@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 产品扩展字段表 Mapper 接口
  * </p>
  *
- * @author Tv
+ * @author kjc
  * @since 2023-05-31
  */
 public interface MaterialPropertyMapper extends BaseMapper<MaterialProperty> {

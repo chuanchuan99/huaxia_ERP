@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 系统参数 Mapper 接口
  * </p>
  *
- * @author Tv
+ * @author kjc
  * @since 2023-05-31
  */
 public interface SystemConfigMapper extends BaseMapper<SystemConfig> {

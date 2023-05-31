@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 产品属性表 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface MaterialAttributeService extends IService<MaterialAttribute> {

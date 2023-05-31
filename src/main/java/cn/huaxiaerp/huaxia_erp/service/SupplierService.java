@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 供应商/客户信息表 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface SupplierService extends IService<Supplier> {

@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 单据主表 Mapper 接口
  * </p>
  *
- * @author Tv
+ * @author kjc
  * @since 2023-05-31
  */
 public interface DepotHeadMapper extends BaseMapper<DepotHead> {

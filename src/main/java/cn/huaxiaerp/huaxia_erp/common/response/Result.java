@@ -1,7 +1,9 @@
 package cn.huaxiaerp.huaxia_erp.common.response;
 
 import lombok.Data;
-
+/**
+ * kjc
+ */
 @Data
 public class Result<T> {
 

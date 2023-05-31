@@ -1,7 +1,9 @@
 package cn.huaxiaerp.huaxia_erp.constants;
 
 import com.alibaba.fastjson.JSONObject;
-
+/**
+ * kjc
+ */
 public class ExceptionConstants {
     /**
      * code 格式 type+五位数字，例如3500000

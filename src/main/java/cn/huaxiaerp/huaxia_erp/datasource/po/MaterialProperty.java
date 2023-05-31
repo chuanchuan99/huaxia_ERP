@@ -6,14 +6,18 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 产品扩展字段表
-* @TableName jsh_material_property
+* @TableName jsh_material_property* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MaterialProperty implements Serializable {
 
     /**
@@ -56,89 +60,6 @@ public class MaterialProperty implements Serializable {
     @Length(max= 1,message="编码长度不能超过1")
     private String deleteFlag;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
 
-    /**
-    * 原始名称
-    */
-    private void setNativeName(String nativeName){
-    this.nativeName = nativeName;
-    }
-
-    /**
-    * 是否启用
-    */
-    private void setEnabled(Boolean enabled){
-    this.enabled = enabled;
-    }
-
-    /**
-    * 排序
-    */
-    private void setSort(String sort){
-    this.sort = sort;
-    }
-
-    /**
-    * 别名
-    */
-    private void setAnotherName(String anotherName){
-    this.anotherName = anotherName;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private void setDeleteFlag(String deleteFlag){
-    this.deleteFlag = deleteFlag;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 原始名称
-    */
-    private String getNativeName(){
-    return this.nativeName;
-    }
-
-    /**
-    * 是否启用
-    */
-    private Boolean getEnabled(){
-    return this.enabled;
-    }
-
-    /**
-    * 排序
-    */
-    private String getSort(){
-    return this.sort;
-    }
-
-    /**
-    * 别名
-    */
-    private String getAnotherName(){
-    return this.anotherName;
-    }
-
-    /**
-    * 删除标记，0未删除，1删除
-    */
-    private String getDeleteFlag(){
-    return this.deleteFlag;
-    }
 
 }

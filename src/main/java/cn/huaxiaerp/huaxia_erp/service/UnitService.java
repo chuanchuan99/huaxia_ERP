@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 多单位表 服务类
  * </p>
  *
- * @author Tv
+ * @author * kjc
  * @since 2023-05-31
  */
 public interface UnitService extends IService<Unit> {

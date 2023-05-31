@@ -7,6 +7,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * kjc
+ */
 public interface RoleMapperEx {
 
     List<RoleEx> selectByConditionRole(

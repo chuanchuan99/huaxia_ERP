@@ -6,6 +6,7 @@ package cn.huaxiaerp.huaxia_erp.constants;
  * @Author qiankunpingtai
  * @Date 2019-3-6 17:58
  * @Version 1.0
+ * kjc
  **/
 public class BusinessConstants {
 
