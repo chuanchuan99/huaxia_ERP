@@ -1,7 +1,10 @@
 package cn.huaxiaerp.huaxia_erp.service;
 
 import cn.huaxiaerp.huaxia_erp.datasource.po.Supplier;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SupplierService extends IService<Supplier> {
 
+    /**
+     * 查询所有会员
+     * @return
+     */
+    public List<Supplier> findBySelectRetail();
 }
