@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.huaxiaerp.huaxia_erp.datasource.mappers.SystemConfigMapper">
+  <resultMap id="BaseResultMap" type="cn.huaxiaerp.huaxia_erp.datasource.po.SystemConfig">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="company_contacts" jdbcType="VARCHAR" property="companyContacts" />
+    <result column="company_address" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="company_tel" jdbcType="VARCHAR" property="companyTel" />
+    <result column="company_fax" jdbcType="VARCHAR" property="companyFax" />
+    <result column="company_post_code" jdbcType="VARCHAR" property="companyPostCode" />
+    <result column="sale_agreement" jdbcType="VARCHAR" property="saleAgreement" />
+    <result column="depot_flag" jdbcType="VARCHAR" property="depotFlag" />
+    <result column="customer_flag" jdbcType="VARCHAR" property="customerFlag" />
+    <result column="minus_stock_flag" jdbcType="VARCHAR" property="minusStockFlag" />
+    <result column="purchase_by_sale_flag" jdbcType="VARCHAR" property="purchaseBySaleFlag" />
+    <result column="multi_level_approval_flag" jdbcType="VARCHAR" property="multiLevelApprovalFlag" />
+    <result column="multi_bill_type" jdbcType="VARCHAR" property="multiBillType" />
+    <result column="force_approval_flag" jdbcType="VARCHAR" property="forceApprovalFlag" />
+    <result column="update_unit_price_flag" jdbcType="VARCHAR" property="updateUnitPriceFlag" />
+    <result column="over_link_bill_flag" jdbcType="VARCHAR" property="overLinkBillFlag" />
+    <result column="tenant_id" jdbcType="BIGINT" property="tenantId" />
+    <result column="delete_flag" jdbcType="VARCHAR" property="deleteFlag" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, company_name, company_contacts, company_address, company_tel, company_fax, company_post_code, 
+    sale_agreement, depot_flag, customer_flag, minus_stock_flag, purchase_by_sale_flag, 
+    multi_level_approval_flag, multi_bill_type, force_approval_flag, update_unit_price_flag, 
+    over_link_bill_flag, tenant_id, delete_flag
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from jsh_system_config
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from jsh_system_config
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <update id="updateByExampleSelective" parameterType="map">
+    update jsh_system_config
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.companyName != null">
+        company_name = #{record.companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyContacts != null">
+        company_contacts = #{record.companyContacts,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyAddress != null">
+        company_address = #{record.companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyTel != null">
+        company_tel = #{record.companyTel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyFax != null">
+        company_fax = #{record.companyFax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyPostCode != null">
+        company_post_code = #{record.companyPostCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.saleAgreement != null">
+        sale_agreement = #{record.saleAgreement,jdbcType=VARCHAR},
+      </if>
+      <if test="record.depotFlag != null">
+        depot_flag = #{record.depotFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.customerFlag != null">
+        customer_flag = #{record.customerFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.minusStockFlag != null">
+        minus_stock_flag = #{record.minusStockFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.purchaseBySaleFlag != null">
+        purchase_by_sale_flag = #{record.purchaseBySaleFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.multiLevelApprovalFlag != null">
+        multi_level_approval_flag = #{record.multiLevelApprovalFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.multiBillType != null">
+        multi_bill_type = #{record.multiBillType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.forceApprovalFlag != null">
+        force_approval_flag = #{record.forceApprovalFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateUnitPriceFlag != null">
+        update_unit_price_flag = #{record.updateUnitPriceFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.overLinkBillFlag != null">
+        over_link_bill_flag = #{record.overLinkBillFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tenantId != null">
+        tenant_id = #{record.tenantId,jdbcType=BIGINT},
+      </if>
+      <if test="record.deleteFlag != null">
+        delete_flag = #{record.deleteFlag,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update jsh_system_config
+    set id = #{record.id,jdbcType=BIGINT},
+      company_name = #{record.companyName,jdbcType=VARCHAR},
+      company_contacts = #{record.companyContacts,jdbcType=VARCHAR},
+      company_address = #{record.companyAddress,jdbcType=VARCHAR},
+      company_tel = #{record.companyTel,jdbcType=VARCHAR},
+      company_fax = #{record.companyFax,jdbcType=VARCHAR},
+      company_post_code = #{record.companyPostCode,jdbcType=VARCHAR},
+      sale_agreement = #{record.saleAgreement,jdbcType=VARCHAR},
+      depot_flag = #{record.depotFlag,jdbcType=VARCHAR},
+      customer_flag = #{record.customerFlag,jdbcType=VARCHAR},
+      minus_stock_flag = #{record.minusStockFlag,jdbcType=VARCHAR},
+      purchase_by_sale_flag = #{record.purchaseBySaleFlag,jdbcType=VARCHAR},
+      multi_level_approval_flag = #{record.multiLevelApprovalFlag,jdbcType=VARCHAR},
+      multi_bill_type = #{record.multiBillType,jdbcType=VARCHAR},
+      force_approval_flag = #{record.forceApprovalFlag,jdbcType=VARCHAR},
+      update_unit_price_flag = #{record.updateUnitPriceFlag,jdbcType=VARCHAR},
+      over_link_bill_flag = #{record.overLinkBillFlag,jdbcType=VARCHAR},
+      tenant_id = #{record.tenantId,jdbcType=BIGINT},
+      delete_flag = #{record.deleteFlag,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+</mapper>

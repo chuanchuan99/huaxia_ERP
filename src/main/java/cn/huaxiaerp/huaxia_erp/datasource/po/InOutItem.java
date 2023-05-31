@@ -6,7 +6,9 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -14,6 +16,8 @@ import org.hibernate.validator.constraints.Length;
 * @TableName jsh_in_out_item* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class InOutItem implements Serializable {
 
     /**

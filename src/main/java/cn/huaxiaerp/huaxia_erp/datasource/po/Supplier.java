@@ -8,7 +8,9 @@ import java.io.Serializable;
 
 import java.math.BigDecimal;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -16,6 +18,8 @@ import org.hibernate.validator.constraints.Length;
 * @TableName jsh_supplier* kjc
 */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Supplier implements Serializable {
 
     /**
