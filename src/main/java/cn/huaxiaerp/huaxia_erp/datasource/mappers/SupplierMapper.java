@@ -25,6 +25,7 @@ public interface SupplierMapper extends BaseMapper<Supplier> {
      * @return
      */
     List<Supplier> getSupplierLikeSupplierOrTelephoneOrPhoneNumber(String type, String supplier, String telephone, String phoneNum);
+
     List<Supplier> getAll();
 
 }
