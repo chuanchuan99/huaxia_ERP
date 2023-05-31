@@ -56,4 +56,5 @@ public class TestController {
     public List<Depot> getAllLikeNameOrLikeRemake(){
         return depotService.getAllLikeNameOrLikeRemake("仓库","");
     }
+
 }
