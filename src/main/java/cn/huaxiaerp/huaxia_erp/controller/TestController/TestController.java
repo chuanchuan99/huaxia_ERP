@@ -1,12 +1,14 @@
 package cn.huaxiaerp.huaxia_erp.controller.TestController;
 
+import cn.huaxiaerp.huaxia_erp.datasource.po.Depot;
 import cn.huaxiaerp.huaxia_erp.datasource.po.Supplier;
+import cn.huaxiaerp.huaxia_erp.service.DepotService;
 import cn.huaxiaerp.huaxia_erp.service.SupplierService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -17,8 +19,10 @@ import java.util.List;
 public class TestController {
     @Resource
     private SupplierService supplierService;
+    @Autowired
+    private DepotService depotService;
+
     @GetMapping("/getAll")
-    @ResponseBody
     public JSONArray getAll(){
         List<Supplier> supplierLikeSupplierOrTelephoneOrPhoneNumber = supplierService.getSupplierLikeSupplierOrTelephoneOrPhoneNumber("会员","", "", "");
         System.out.println("supplierLikeSupplierOrTelephoneOrPhoneNumber的结果");
@@ -48,4 +52,8 @@ public class TestController {
         return arr;
     }
 
+    @GetMapping("/getAll2")
+    public List<Depot> getAllLikeNameOrLikeRemake(){
+        return depotService.getAllLikeNameOrLikeRemake("仓库","");
+    }
 }
