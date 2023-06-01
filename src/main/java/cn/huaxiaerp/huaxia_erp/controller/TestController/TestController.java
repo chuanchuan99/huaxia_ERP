@@ -58,7 +58,10 @@ public class TestController {
         return depotService.getAllLikeNameOrLikeRemake("仓库","");
     }
 
-    //根据id批量设置enable
+    /**
+     * 根据id批量设置enable
+     */
+
     @GetMapping("/batchUpdateEnable")
     public boolean batchUpdateEnable(@RequestParam("ids") List<Integer> ids, @RequestParam("enable") Boolean enabled) {
 
