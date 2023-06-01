@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class HuaxiaErpApplication {
 
     public static void main(String[] args) {
-        System.out.println("springboot!!!");
+        System.out.println("启动springboot!!!");
         SpringApplication.run(HuaxiaErpApplication.class, args);
     }
 
