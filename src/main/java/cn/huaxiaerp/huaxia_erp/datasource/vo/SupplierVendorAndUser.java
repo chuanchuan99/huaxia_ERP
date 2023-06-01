@@ -52,7 +52,7 @@ public class SupplierVendorAndUser {
     /**
      * 状态
      */
-    private String enabled;
+    private Boolean enabled;
 
 
 
