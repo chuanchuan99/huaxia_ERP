@@ -10,6 +10,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class SupplierVendorAndUser {
     /**
+     * id
+     */
+    private String Id;
+    /**
      * 名称
      */
     private String Supplier;
@@ -48,7 +52,7 @@ public class SupplierVendorAndUser {
     /**
      * 状态
      */
-    private String enabled;
+    private Boolean enabled;
 
 
 

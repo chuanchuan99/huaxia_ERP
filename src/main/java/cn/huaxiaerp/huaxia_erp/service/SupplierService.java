@@ -31,4 +31,6 @@ public interface SupplierService extends IService<Supplier> {
      */
     public List<Supplier> getSupplierLikeSupplierOrTelephoneOrPhoneNumber(String type,String supplier ,String telephone,String phoneNum );
 
+    //根据id批量设置enable
+    public void batchUpdateEnable(List<Integer> ids, boolean enabled);
 }

@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -40,6 +42,14 @@ public class SupplierServiceImpl extends ServiceImpl<SupplierMapper, Supplier> i
     @Override
     public List<Supplier> getSupplierLikeSupplierOrTelephoneOrPhoneNumber(String type,String supplier, String telephone, String phoneNum) {
         return supplierMapper.getSupplierLikeSupplierOrTelephoneOrPhoneNumber(type,supplier,telephone,phoneNum);
+    }
+
+    @Override
+    public void batchUpdateEnable(List<Integer> ids, boolean enabled) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("ids", ids);
+        params.put("enabled", enabled);
+        supplierMapper.batchUpdateEnable(params);
     }
 
 }

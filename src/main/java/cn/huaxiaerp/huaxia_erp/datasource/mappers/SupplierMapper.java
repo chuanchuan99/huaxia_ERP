@@ -5,6 +5,7 @@ import cn.huaxiaerp.huaxia_erp.datasource.po.Supplier;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -27,5 +28,8 @@ public interface SupplierMapper extends BaseMapper<Supplier> {
     List<Supplier> getSupplierLikeSupplierOrTelephoneOrPhoneNumber(String type, String supplier, String telephone, String phoneNum);
 
     List<Supplier> getAll();
+
+    int batchUpdateEnable(Map<String, Object> params);
+
 
 }
